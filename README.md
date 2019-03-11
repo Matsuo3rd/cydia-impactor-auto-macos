@@ -4,7 +4,7 @@ Automate Cydia Impactor sideloading process through Apple Script (on MacOS)
 ## Description
 This Apple Script automates [Cydia Impactor](http://www.cydiaimpactor.com/) sideloading process (eg. uploading IPA file to Apple TV) on a MacOS computer.
 
-My personal use case is having [ProvenanceTV](https://github.com/Provenance-Emu/Provenance) re-signed on my Apple TV every 7 days (to bypass non-signed IPA - free developer - lifetime Apple's limitation). Script is running on a 7/24 Mac Mini every saturday at 4am.
+My personal use case is having [ProvenanceTV](https://github.com/Provenance-Emu/Provenance) re-signed on my Apple TV every 7 days (to bypass non-signed IPA - free developer - lifetime Apple's limitation). Script is running on a 24/7 Mac Mini every saturday at 4am (using Apple Scheduler: [launchd](http://www.launchd.info/)).
 
 ## Prerequisites
 
