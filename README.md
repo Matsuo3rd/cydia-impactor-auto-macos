@@ -9,6 +9,7 @@ My personal use case is having [ProvenanceTV](https://github.com/Provenance-Emu/
 ## Prerequisites
 
 * MacOS computer (not compatible with Windows / Linux)
+* Cydia Impactor installed on MacOS computer
 * iOS / tvOS device to sideload IPA to
 * Apple Developer account (can be a Free)
 * IPA file to be sideloaded
@@ -31,6 +32,6 @@ AutoCydiaImpactor.scpt must be edited to match your configuration:
 | `ApplePassword` | N/A | Your Apple ID developer password |
 | `IPAPath` | N/A | IPA to be sideloaded path|
 | `DeviceLabel` | N/A | Device label to sideload IPA to. Must match one of the entry in Cydia Impactor devices list. e.g. "Apple TV Salon [73fc69972dfa987d61c8a357698e1833fa6f9cd7]"|
-| `ClicClickPath` | N/A | [CliClick](https://github.com/BlueM/cliclick) binary filepath (needed to simulate click on Device list)|
+| `CliClickPath` | N/A | [CliClick](https://github.com/BlueM/cliclick) binary filepath (needed to simulate click on Device list)|
 | `SleepDisplayPath` | N/A | [SleepDisplay](https://github.com/bigkm/SleepDisplay/zipball/master) binary filepath (needed to wakeup screen)|
 
