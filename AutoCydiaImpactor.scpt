@@ -8,7 +8,7 @@ set AppleUsername to "APPLE_ID_EMAIL"
 set ApplePassword to "APPLE_ID_PASSWORD"
 set IPAPath to POSIX path of "IPA_PATH"
 set DeviceLabel to "DEVICE_LABEL"
-set ClicClickPath to "CLICCLICK_PATH"
+set CliClickPath to "CLICLICK_PATH"
 set SleepDisplayPath to "SLEEPDISPLAY_PATH"
 
 set targetDevice to null
@@ -61,7 +61,7 @@ log "Clicking on Device at m:" & realXPosition & "," & realYPosition & " dc:" & 
 tell application "System Events" to tell process "Impactor"
 	click button 1 of combo box 2 of window "Cydia Impactor"
 end tell
-do shell script ClicClickPath & " m:" & realXPosition & "," & realYPosition & " dc:" & realXPosition & "," & realYPosition
+do shell script CliClickPath & " m:" & realXPosition & "," & realYPosition & " dc:" & realXPosition & "," & realYPosition
 delay 0.25
 
 log "Launching Install Package... menu"
