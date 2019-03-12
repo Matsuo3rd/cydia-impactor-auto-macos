@@ -95,7 +95,7 @@ end tell
 
 delay 1
 
-#"Apple ID Username"
+# Apple ID Username
 log "Entering Apple ID Username " & AppleUsername
 tell application "Impactor.app" to activate
 tell application "System Events"
@@ -107,7 +107,7 @@ end tell
 
 delay 1
 
-#"Apple ID Password"
+# Apple ID Password
 log "Entering Apple ID Password"
 tell application "System Events"
 	tell process "Impactor"
