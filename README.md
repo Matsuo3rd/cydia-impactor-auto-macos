@@ -11,7 +11,7 @@ My personal use case is having [ProvenanceTV](https://github.com/Provenance-Emu/
 * MacOS computer (not compatible with Windows / Linux)
 * Cydia Impactor installed on MacOS computer
 * iOS / tvOS device to sideload IPA to
-* Apple Developer account (can be a Free)
+* Apple Developer account (can be a Free one)
 * IPA file to be sideloaded
 * Download and extract [CliClick](https://github.com/BlueM/cliclick)
 * Download and extract [SleepDisplay](https://github.com/bigkm/SleepDisplay/zipball/master)
