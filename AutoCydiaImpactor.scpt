@@ -20,7 +20,7 @@ if SleepDisplayPath is not null then
 end if
 
 log "Launching Impactor"
-tell application "Impactor.app" to activate
+tell application "Impactor" to activate
 
 # Search for TargetDevice in Devices Combo Box
 log "Looking for Device " & DeviceLabel
@@ -61,11 +61,11 @@ log "Clicking on Device at m:" & realXPosition & "," & realYPosition & " dc:" & 
 tell application "System Events" to tell process "Impactor"
 	click button 1 of combo box 2 of window "Cydia Impactor"
 end tell
-do shell script CliClickPath & " m:" & realXPosition & "," & realYPosition & " dc:" & realXPosition & "," & realYPosition
+do shell script ClicClickPath & " m:" & realXPosition & "," & realYPosition & " dc:" & realXPosition & "," & realYPosition
 delay 0.25
 
 log "Launching Install Package... menu"
-tell application "Impactor.app" to activate
+tell application "Impactor" to activate
 tell application "System Events"
 	tell process "Impactor"
 		click menu item "Install Package..." of menu 1 of menu bar item "Device" of menu bar 1
@@ -78,49 +78,34 @@ log "Entering IPA file " & IPAPath
 #tell application "System Events"
 tell application "System Events" to tell process "Impactor"
 	keystroke "G" using {shift down, command down}
-	delay 0.25
+	delay 0.5
 	keystroke IPAPath
-	delay 0.25
+	delay 0.5
 	keystroke return
-	delay 0.25
+	delay 2
+	keystroke return
+	delay 2
 end tell
 
-# Open IPA file
-log "Opening IPA file"
-tell application "System Events"
-	tell process "Impactor"
-		click button "Open" of window "Open"
-	end tell
-end tell
-
-delay 1
-
-# Apple ID Username
+#"Apple ID Username"
 log "Entering Apple ID Username " & AppleUsername
-tell application "Impactor.app" to activate
-tell application "System Events"
-	tell process "Impactor"
-		set value of text field 1 of window "Apple ID Username" to AppleUsername
-		click button "OK" of window "Apple ID Username"
-	end tell
+tell application "System Events" to tell process "Impactor"
+	set value of text field 1 of window "Apple ID Username" to AppleUsername
+	click button "OK" of window "Apple ID Username"
 end tell
 
 delay 1
 
-# Apple ID Password
+#"Apple ID Password"
 log "Entering Apple ID Password"
-tell application "System Events"
-	tell process "Impactor"
-		set value of text field 1 of window "Apple ID Password" to ApplePassword
-		click button "OK" of window "Apple ID Password"
-	end tell
+tell application "System Events" to tell process "Impactor"
+	set value of text field 1 of window "Apple ID Password" to ApplePassword
+	click button "OK" of window "Apple ID Password"
 end tell
 
 # Wait for IPA sideload to complete and quit Cydia Impactor
 log "Waiting before quitting Impactor"
 delay 60
-tell application "Impactor.app"
+tell application "Impactor"
 	quit
 end tell
-
-
